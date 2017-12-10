@@ -21,6 +21,10 @@ Memory leak problemer opstår oftes af to grunde:
 * simpelt mangel på ram. Dette problem opstår når en application skal bruge mere ram end den har. Derfor er problemet også nemt løst, da det eneste der skal gøres, er at allokere mere ram hvor det mangler.
 * over konsumering. Dette problem opstår når en handling bruger mere ram en den egentlig burde. Dette sker ofte når noget ikke er kodet ordenligt. som f.eks. en metode eller en database query som bruger alt det allokerede ram. Dette problem er svære at løse, fordi det kan forveksles med det tidligere nævnte problem, og hvis man prøver at allokere mere ram til applicationen, bliver det bare brugt op på samme måde. Så dette problem bliver løst ved at optimere ens kode.
 
+## fordele ved ordentlig memory management
+de fleste applikationer idag udnytter sig af en eller anden form for hosting, og de fleste hosting sites sælger deres produkt i pakker.
+var pakke kommer med forskellige specs. det kunne nemlig være hvor meget ram de tilbyder. Derfor er det vigtigt at have styr på at bruge så minimalt meget memory som muligt, for så kan man undgå at skulle betale for mere ram end man har behov for.
+derudover kan man opnå hurtigere applikationer ved at formindske memory forbrugen.
 
 ## Hvordan løste vi vores problem?
 
