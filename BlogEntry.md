@@ -38,3 +38,4 @@ Vi refaktorerede vores kode, og ændrede måden hvorpå vi håndterede queries t
 * [Trashing](https://en.wikipedia.org/wiki/Thrashing_(computer_science)).
 * [http://searchwindowsserver.techtarget.com/definition/memory-leak](http://searchwindowsserver.techtarget.com/definition/memory-leak).
 * [https://en.wikipedia.org/wiki/Memory_leak](https://en.wikipedia.org/wiki/Memory_leak).
+* [https://www.digitalocean.com/pricing/](https://www.digitalocean.com/pricing)
