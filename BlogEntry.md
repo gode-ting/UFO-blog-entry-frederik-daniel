@@ -4,7 +4,7 @@
 
 I vores applikation foretager vi database queries. Måden hvorpå vi gjorde dette, var skyld i, at vi havde memory leaks, som fik vores applikation til at crashe.
 
-Grunden var, at hver gang `/latest` blev kaldt, hentede vores applikation alle posts som simulatoren havde sendt, sortede dem i faldende rækkefølge og det det første element's hanesstID. Denne opgave kræver en del hukommelse, og når `/latest` ofte bliver kaldt, løb applikationen på et tidspunkt tør for memory, og crashede. **Årsag:** "Out of Memory" error.
+Grunden var, at hver gang `/latest` blev kaldt, hentede vores applikation alle posts som simulatoren havde sendt, sortede dem i faldende rækkefølge og det første element's hanesstID. Denne opgave kræver en del hukommelse, og når `/latest` ofte bliver kaldt, løb applikationen på et tidspunkt tør for memory, og crashede. **Årsag:** "Out of Memory" error.
 
 ## Hvad er memory leaks
 
