@@ -44,7 +44,9 @@ Memory problemer kan deles ind i to grupper:
 
 ### Finde problemet
 
-Der findes overvågnings tools som visualvm, det de gør er at overvåge "running code" og visuallisere brugen af memory. Derfor kan man følge med på brugen af memory, og finde problemet. - - *Indsæt dette billed her (for jeg kan ikke huske hvordan man gør): https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/resources/VisualVm.PNG* - - 
+Der findes overvågnings tools som visualvm, det de gør er at overvåge "running code" og visuallisere brugen af memory. Derfor kan man følge med på brugen af memory, og finde problemet.
+
+![Visual vm illustration](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/resources/VisualVm.PNG)
 
 ## Arbejde fremad - - *Bedre overskrift??* - -
 
