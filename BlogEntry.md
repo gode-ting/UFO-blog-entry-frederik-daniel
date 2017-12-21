@@ -24,9 +24,13 @@ I vores applikation foretager vi database queries. Måden hvorpå vi gjorde dett
 
 Grunden var, at hver gang `/latest` blev kaldt, hentede vores applikation alle posts som simulatoren havde sendt, sortede dem i faldende rækkefølge og det første element's hanesstID. Denne opgave kræver en del hukommelse, og når `/latest` ofte bliver kaldt, løb applikationen på et tidspunkt tør for memory, og crashede. **Årsag:** "Out of Memory" error.
 
+## Hvordan løste vi vores problem
+
+Vi refaktorerede vores kode, og ændrede måden hvorpå vi håndterede queries til vores database, således, at vi ikke processerede for meget data ad gangen. På den måde mindskede vi hvor meget memory dette optog, og modvirkede at få en "Out of Memory" error.
+
 ## Hvornår opstår problemet?
 
-Problemet opstår når en applikation skal holde styr på for mange referencer til for mange objekter. I Java og andre programmering sprog hvor der er en indbygget garbage collecter, opstår dette problem når garbage collecteren ikke kan følge med, med antallet af ikke brugte referencer. I programmering sprog som C++, hvor der ikke er en indbygget garbage collecter, opstår problemet når man glemmer at frigøre hukommelse *Indsæt dette billed her (for jeg kan ikke huske hvordan man gør): https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project* 
+Problemet opstår når en applikation skal holde styr på for mange referencer til for mange objekter. I Java og andre programmering sprog hvor der er en indbygget garbage collecter, opstår dette problem når garbage collecteren ikke kan følge med, med antallet af ikke brugte referencer. I programmering sprog som C++, hvor der ikke er en indbygget garbage collecter, opstår problemet når man glemmer at frigøre hukommelse - - *Indsæt dette billed her (for jeg kan ikke huske hvordan man gør): https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project* - -
 
 ## Hvordan kan problemet løses?
 
@@ -37,10 +41,25 @@ Memory problemer kan deles ind i to grupper:
 
 ### Finde problemet
 
-Der findes overvågnings tools som visualvm, det de gør er at overvåge "running code" og visuallisere brugen af memory. Derfor kan man følge med på brugen af memory, og finde problemet. 
+Der findes overvågnings tools som visualvm, det de gør er at overvåge "running code" og visuallisere brugen af memory. Derfor kan man følge med på brugen af memory, og finde problemet. - - *Indsæt dette billed her (for jeg kan ikke huske hvordan man gør): https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/resources/VisualVm.PNG* - - 
 
+## Arbejde fremad - - *Bedre overskrift??* - -
 
+Her er en liste over de ting du skal være opmærksom på hvis du gerne ville undgå at løbe ind i memory problemer, når du skriver kode til din applikation:
 
+* Husk at frigive de referencer du ikke skal bruge mere, eller reuse den allerede allokeret hukommelse.
+* Lad vær med at hent hele databasen, for så at sortere i din java applikation. gør det på database niveauet.
+* Undgå at alloker hukommelse til noget du ikke nødvendigvis behøver. 
+* 
+
+## Referencer
+
+* [Trashing](https://en.wikipedia.org/wiki/Thrashing_(computer_science)).
+* [http://searchwindowsserver.techtarget.com/definition/memory-leak](http://searchwindowsserver.techtarget.com/definition/memory-leak).
+* [https://en.wikipedia.org/wiki/Memory_leak](https://en.wikipedia.org/wiki/Memory_leak).
+* [https://www.digitalocean.com/pricing/](https://www.digitalocean.com/pricing)
+* [https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project](https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project)
+* [https://visualvm.github.io/](https://visualvm.github.io/)
 
 OLD VERSION BELOW
 
@@ -85,5 +104,4 @@ Vi refaktorerede vores kode, og ændrede måden hvorpå vi håndterede queries t
 * [http://searchwindowsserver.techtarget.com/definition/memory-leak](http://searchwindowsserver.techtarget.com/definition/memory-leak).
 * [https://en.wikipedia.org/wiki/Memory_leak](https://en.wikipedia.org/wiki/Memory_leak).
 * [https://www.digitalocean.com/pricing/](https://www.digitalocean.com/pricing)
-* [https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project](https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project)
-* [https://visualvm.github.io/](https://visualvm.github.io/)
+
