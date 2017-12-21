@@ -4,7 +4,7 @@ Repository for our UFO assignment, where we have to write a blog entry discussin
 
 You can read our first [Blog post here](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/docs/BlogEntry.md).
 
-You can read our **final** [Revised blog post here](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/docs/BlogEntry-revised.md) 
+You can read our **final** [Revised blog post here](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/docs/BlogEntry-revised.md).
 
 ## Authors
 
