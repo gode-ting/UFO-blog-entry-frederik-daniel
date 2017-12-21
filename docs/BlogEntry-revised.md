@@ -99,7 +99,7 @@ Der findes overvågnings tools som visualvm, hvor man kan overgåe "running code
 
 ![Visual vm illustration](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/resources/VisualVm.PNG)
 
-## Arbejde fremad - - *Bedre overskrift??* - -
+## Arbejde fremad
 
 Ting der er gode at være opmærksom på, hvis man vil undgå at støde ind i memory problemer i sin applikation:
 
