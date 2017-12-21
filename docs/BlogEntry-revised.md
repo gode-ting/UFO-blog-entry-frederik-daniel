@@ -1,4 +1,6 @@
-# Memory problemer ved query af MongoDB
+# Memory problemer ved query af MongoDB, og hvordan disse kan løses
+
+![out of memory meme](https://github.com/gode-ting/UFO-blog-entry-frederik-daniel/blob/master/resources/out-of-memory-meme.jpg)
 
 Memory problemer kan være et stort problem, når man gerne vil have en hurtig og responsiv applikation. De er skyld i at applikationer kan fremstpå langsome, og i visse tilfælde crashe. Memory problemer er ofte svære at finde, da de ofte ikke peger på nogle konkrete steder som er årsag til problemet, istedet viser de det ved at gøre applikationen langsommere, eller simpelt, fortælle at de er løbet tør for hukommelse, og derfor har lukket applikationen. Optimering af en applikations memory forbrug kan ofte lede til forbedret performance, samtidig med at man kan spare penge på sin hosting, da man ikke skal allokere applikationen lige så meget memory.
 
