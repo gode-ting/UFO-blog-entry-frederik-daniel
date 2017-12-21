@@ -26,9 +26,19 @@ Grunden var, at hver gang `/latest` blev kaldt, hentede vores applikation alle p
 
 ## Hvornår opstår problemet?
 
-Problemet opstår når en applikation skal holde styr på for mange referencer til for mange objekter. I Java og andre programmering sprog hvor der er en indbygget garbage collecter, opstår dette problem når garbage collecteren ikke kan følge med, med antallet af ikke brugte referencer. I programmering sprog som C++, hvor der ikke er en indbygget garbage collecter, opstår problemet når man glemmer at af
+Problemet opstår når en applikation skal holde styr på for mange referencer til for mange objekter. I Java og andre programmering sprog hvor der er en indbygget garbage collecter, opstår dette problem når garbage collecteren ikke kan følge med, med antallet af ikke brugte referencer. I programmering sprog som C++, hvor der ikke er en indbygget garbage collecter, opstår problemet når man glemmer at frigøre hukommelse *Indsæt dette billed her (for jeg kan ikke huske hvordan man gør): https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project* 
 
 ## Hvordan kan problemet løses?
+
+Memory problemer kan deles ind i to grupper:
+
+* simpelt mangel på ram. Dette problem opstår når en application skal bruge mere ram end den har. Derfor er problemet også nemt løst, da det eneste der skal gøres, er at allokere mere ram hvor det mangler.
+* over konsumering. Dette problem opstår når en handling bruger mere ram en den egentlig burde. Dette sker ofte når noget ikke er kodet ordenligt. som f.eks. en metode eller en database query som bruger alt det allokerede ram. Dette problem er svære at løse, fordi det kan forveksles med det tidligere nævnte problem, og hvis man prøver at allokere mere ram til applicationen, bliver det bare brugt op på samme måde. Så dette problem bliver løst ved at optimere ens kode.
+
+### Finde problemet
+
+Der findes overvågnings tools som visualvm, det de gør er at overvåge "running code" og visuallisere brugen af memory. Derfor kan man følge med på brugen af memory, og finde problemet. 
+
 
 
 
@@ -75,3 +85,5 @@ Vi refaktorerede vores kode, og ændrede måden hvorpå vi håndterede queries t
 * [http://searchwindowsserver.techtarget.com/definition/memory-leak](http://searchwindowsserver.techtarget.com/definition/memory-leak).
 * [https://en.wikipedia.org/wiki/Memory_leak](https://en.wikipedia.org/wiki/Memory_leak).
 * [https://www.digitalocean.com/pricing/](https://www.digitalocean.com/pricing)
+* [https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project](https://stackoverflow.com/questions/6261201/how-to-find-memory-leak-in-a-c-code-project)
+* [https://visualvm.github.io/](https://visualvm.github.io/)
